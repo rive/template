@@ -1,0 +1,6 @@
+# Stylelint makes a lot of false warnings in JavaScript/TypeScript
+*.js
+*.jsx
+*.mjs
+*.ts
+*.tsx
