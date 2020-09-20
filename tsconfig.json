@@ -5,11 +5,7 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "jsx": "react",
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "esnext"
-        ],
+        "lib": ["dom", "dom.iterable", "esnext"],
         "module": "esnext",
         "moduleResolution": "node",
         "noEmit": true,
@@ -19,9 +15,5 @@
         "strict": true,
         "target": "es5"
     },
-    "exclude": [
-        "**/node_modules",
-        "**/*.spec.ts",
-        "**/*.spec.tsx"
-    ]
+    "exclude": ["**/node_modules", "**/*.spec.ts", "**/*.spec.tsx"]
 }

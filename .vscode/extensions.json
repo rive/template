@@ -1,17 +1,14 @@
 {
-	// See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
-	// Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
-	//
-	// List of extensions which should be recommended for users of this workspace.
-	"recommendations": [
-		"editorconfig.editorconfig",
-		"ms-vscode.vscode-typescript-tslint-plugin",
-		"calvinhong.stylelint-fix"
-	],
-	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
-	"unwantedRecommendations": [
-		"esbenp.prettier-vscode",
-		"shinnn.stylelint",
-		"dbaeumer.vscode-eslint"
-	]
+    // See https://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+    // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+    //
+    // List of extensions which should be recommended for users of this workspace.
+    "recommendations": [
+        "editorconfig.editorconfig",
+        "stylelint.vscode-stylelint",
+        "prettier.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+    ],
+    // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+    "unwantedRecommendations": ["dbaeumer.jshint", "hookyqr.beautify"]
 }
