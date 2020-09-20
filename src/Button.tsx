@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import "./Button.css";
 
 export interface ButtonProps {
@@ -27,13 +27,13 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
+export default function Button({
     primary = false,
     size = "medium",
     backgroundColor,
     label,
     ...props
-}) => {
+}: ButtonProps): ReactElement {
     const mode = primary
         ? "storybook-button--primary"
         : "storybook-button--secondary";
@@ -51,4 +51,4 @@ export const Button: React.FC<ButtonProps> = ({
             {label}
         </button>
     );
-};
+}

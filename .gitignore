@@ -1,5 +1,3 @@
 node_modules
-dist
-build
-*.js
-*.d.ts
+storybook-static
+lib

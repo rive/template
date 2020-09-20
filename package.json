@@ -1,24 +1,45 @@
 {
-  "private": true,
   "scripts": {
-    "start": "start-storybook -p 6006 -s public",
-    "build": "build-storybook -s public",
+    "build": "tsc && babel src --out-dir lib --copy-files",
+    "start": "npm run storybook:start",
+    "storybook:start": "start-storybook -h localhost -p 6006 -s public",
+    "storybook:build": "build-storybook -s public",
+    "storybook:deploy": "gh-pages -d storybook-static",
     "test": "jest"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rive/foobar.git"
+  },
+  "author": "Guo Yunhe <i@guoyunhe.me>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/rive/foobar/issues"
+  },
+  "homepage": "https://github.com/rive/foobar#readme",
   "peerDependencies": {
     "react": "^15 || ^16",
     "react-dom": "^15 || ^16"
   },
   "devDependencies": {
+    "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
     "@storybook/addon-actions": "^6.0.21",
     "@storybook/addon-essentials": "^6.0.21",
     "@storybook/addon-links": "^6.0.21",
     "@storybook/node-logger": "^6.0.21",
     "@storybook/react": "^6.0.21",
     "@types/react": "^16.9.49",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-test-renderer": "^16.9.3",
     "@typescript-eslint/eslint-plugin": "^4.1.1",
     "@typescript-eslint/parser": "^4.1.1",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "eslint": "^7.9.0",
     "eslint-config-prettier": "^6.11.0",
@@ -28,10 +49,12 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.2",
+    "jest": "^26.4.2",
     "prettier": "^2.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-is": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "stylelint": "^13.7.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^20.0.0",
